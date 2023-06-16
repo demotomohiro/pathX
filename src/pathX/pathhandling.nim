@@ -9,7 +9,7 @@ func joinDire*[PH: PathX](head: PH; tailDire: string{lit}):
   ## Joins `tailDire` directory to `head` and returns it.
   ## `tailDire` must be a single directory name.
   runnableExamples:
-    import base, lowlevel
+    import pathX/[base, lowlevel]
     type
       AbsoDire = PathX[fdDire, arAbso, osLinux, true]
     assert AbsoDire"/home".joinDire"nimmer".exactEq AbsoDire"/home/nimmer"
@@ -21,7 +21,7 @@ func joinFile*[PH: PathX](head: PH; tailFile: string{lit}):
   ## Joins `tailFile` file to `head` and returns it.
   ## `tailFile` must be a single file name.
   runnableExamples:
-    import base, lowlevel
+    import pathX/[base, lowlevel]
     type
       AbsoDire = PathX[fdDire, arAbso, osLinux, true]
       AbsoFile = PathX[fdFile, arAbso, osLinux, true]

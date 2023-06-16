@@ -93,7 +93,7 @@ proc addNormalizePath*[T: PathX; U: PathX](x: T; result: var U; state: var int) 
 
 proc normalizePath*(path: PathX; direSepa: char): typeof(path) =
   runnableExamples:
-    import base, lowlevel
+    import pathX/[base, lowlevel]
     type
       RelaDire = PathX[fdDire, arRela, osLinux, true]
       AbsoFile = PathX[fdFile, arAbso, osWindows, true]

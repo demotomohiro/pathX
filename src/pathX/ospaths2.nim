@@ -29,7 +29,7 @@ proc normalizePathEnd*(path: var PathX; trailingSep = false) =
 proc normalizePathEnd*(path: PathX; trailingSep = false): typeof(path) =
   ## outplace overload
   runnableExamples:
-    import base, lowlevel
+    import pathX/[base, lowlevel]
     type
       AbsoDire = PathX[fdDire, arAbso, osLinux, true]
       RelaDire = PathX[fdDire, arRela, osLinux, true]
@@ -61,7 +61,7 @@ func joinPath*[PH: PathX; PT: PathX](head: PH; tail: PT):
   ## See also:
   ## * `/ proc`_
   runnableExamples:
-    import base, lowlevel
+    import pathX/[base, lowlevel]
     type
       AbsoDire = PathX[fdDire, arAbso, osLinux, true]
       RelaDire = PathX[fdDire, arRela, osLinux, true]
@@ -94,7 +94,7 @@ proc `/`*[PH: PathX; PT: PathX](head: PH; tail: PT):
   ## See also:
   ## * `joinPath(head, tail) proc`_
   runnableExamples:
-    import base, lowlevel
+    import pathX/[base, lowlevel]
     type
       AbsoDire = PathX[fdDire, arAbso, osLinux, true]
       RelaDire = PathX[fdDire, arRela, osLinux, true]
@@ -124,7 +124,7 @@ func parentDir*[T: PathX](path: T): PathX[fdDire, T.AoR, T.EOS, T.DoesFollowLink
   ##
   ## See also:
   runnableExamples:
-    import base, lowlevel
+    import pathX/[base, lowlevel]
     type
       AbsoDire = PathX[fdDire, arAbso, osLinux, true]
       RelaDire = PathX[fdDire, arRela, osLinux, true]
