@@ -2,7 +2,7 @@
 ## but library users would not use.
 
 import base
-import compiler/platform
+import "$nim"/compiler/platform
 
 func `[]`*(x: PathX; i: Natural): char = x.string[i]
 

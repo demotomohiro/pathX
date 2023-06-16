@@ -1,4 +1,4 @@
-import compiler/platform
+import "$nim"/compiler/platform
 export platform.TSystemOS
 
 type

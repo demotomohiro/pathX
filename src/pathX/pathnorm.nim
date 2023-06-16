@@ -1,7 +1,7 @@
 # Based on lib/pure/pathnorm.nim in Nim standard library.
 
 import base, lowlevel
-import compiler/platform
+import "$nim"/compiler/platform
 import std/private/ntpath
 import std/[assertions]
 
