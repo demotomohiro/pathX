@@ -1,5 +1,6 @@
 # pathX
 Generic path handling library
+[Document](https://demotomohiro.github.io/pathX/pathX.html)
 
 PathX provides procedures that work like procedures in os module in Nim's stdlib,
 but it can create paths for arbitrary OS at both compile time and runtime.
