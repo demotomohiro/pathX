@@ -85,8 +85,6 @@ You can specify OS from `TSystemOS` enum in [compiler/platform.nim](https://gith
 
 ## Requirements
 
-- Nim devel version
-  - It will support stable version when Nim 2.0 is released if possible
+- Nim 2.0.0
 - Nim compiler module
-  - Make sure `import compiler/platform` works
-
+  - Make sure `import "$nim"/compiler/platform` works
