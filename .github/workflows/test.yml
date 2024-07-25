@@ -9,7 +9,7 @@ jobs:
         nim: ['stable', 'devel']
         exclude:
           - os: windows-latest
-            version: devel
+            nim: devel
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
