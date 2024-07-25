@@ -26,8 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jiro4989/setup-nim-action@v2
-        with:
-          nim-version: 'devel'
+        #with:
+        #  nim-version: 'devel'
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
