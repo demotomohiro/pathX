@@ -1,13 +1,13 @@
 # pathX
 Generic path handling library
+
 [Document](https://demotomohiro.github.io/pathX/pathX.html)
 
-PathX provides procedures that work like procedures in os module in Nim's stdlib,
-but it can create paths for arbitrary OS at both compile time and runtime.
+PathX provides procedures that work like procedures in os or paths module in Nim's stdlib, but it can create paths for arbitrary OS at both compile time and runtime.
 
 In cross compilation, Nim's os module cannot compose paths that can be used to access the file on the build machine at compile time.
 For example, suppose you are cross compiling Windows executable on Linux machine.
-If you use `joinPath` procedure at compile time, it works in the same way as on Windows and use '\' to join two paths.
+If you use `joinPath` procedure at compile time, it works in the same way as on Windows and use '`\`' to join two paths.
 In that case, there is no way to ask `joinPath` to use '/' to generate a path for Linux and you cannot use it on build machine.
 
 PathX allows you to choose which OS paths are composed for.
@@ -15,7 +15,7 @@ So in cross compilation, you can create paths for both build machine and target 
 You can also create paths for any supported OS that is different from the OS your program runs on.
 
 `PathX` generic type has generic parameters to specify file or directory and absolute or relative to provide type safety.
-And it also has a bool generic parameter to specify whether it follow a symbolic link.
+And it also has a bool generic parameter to specify whether it follow a symbolic link (but it is currently ignored. File operations without following a symbolic link is not yet implemented).
 
 ### Example code
 
